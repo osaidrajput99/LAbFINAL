@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title> Home Page</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #008000, #00ff00);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-green">
+      <a class="navbar-brand" href="#">My Websitenew</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="record.html">Records</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <button class="btn btn-primary">T1AP3</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4"  >
+          <img src="h1blg.png" class="card-img-top" alt="Blog 1 Image"  style=" width: 248px; " >
+          <div class="card-body">
+            <h5 class="card-title">Blog 1 Title</h5>
+            <p class="card-text">Blog 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="card-link">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-4"  >
+          <img src="h1blg.png" class="card-img-top" alt="Blog 2 Image"  style=" width: 248px; ">
+          <div class="card-body">
+            <h5 class="card-title">Blog 2 Title</h5>
+            <p class="card-text">Blog 2 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="card-link">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4"  >
+            <img src="h1blg.png" class="card-img-top" alt="Blog 1 Image"  style=" width: 248px; " >
+            <div class="card-body">
+              <h5 class="card-title">Blog 1 Title</h5>
+              <p class="card-text">Blog 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="card-link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4" >
+            <img src="h1blg.png" class="card-img-top" alt="Blog 2 Image"  style=" width: 248px; ">
+            <div class="card-body">
+              <h5 class="card-title">Blog 2 Title</h5>
+              <p class="card-text">Blog 2 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="card-link">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4"  >
+                <img src="h1blg.png" class="card-img-top" alt="Blog 1 Image"  style=" width: 248px; " >
+                <div class="card-body">
+                  <h5 class="card-title">Blog 1 Title</h5>
+                  <p class="card-text">Blog 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4"  >
+                <img src="h1blg.png" class="card-img-top" alt="Blog 2 Image"  style=" width: 248px; ">
+                <div class="card-body">
+                  <h5 class="card-title">Blog 2 Title</h5>
+                  <p class="card-text">Blog 2 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>
+            </div>
+
+
+      <!-- Repeat the above two blog cards to create more rows -->
+    </div>
+  </main>
+
+  <footer class="bg-green text-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="logo.png" alt="Logo" style=" width: 140px; ">
+        </div>
+        <div class="col-md-2">
+          <h6>Quicklinks</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Travel and Promo Fli</h6>
+          <!-- Add your content here -->
+        </div>
+        <div class="col-md-2">
+          <h6>Recommendation and guides</h6>
+          <!-- Add your content here -->
+        </div>
+        <div class="col-md-4">
+          <h6>Mission Statement and The team</h6>
+          <!-- Add your content here -->
+        </div>
+      </div>
+      <hr>
+      <p class="text-center">2021 - 2022 My New Website. All Right Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    fetch("https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=f7d54802ae9d4e2eb6b90d6e456b63ee")
+      .then(response => response.json())
+      .then(data => {
+        const newsContainer = document.getElementById("newsContainer");
+        const articles = data.articles;
+
+        articles.forEach(article => {
+          const articleDiv = document.createElement("div");
+          articleDiv.classList.add("article");
+
+          const title = document.createElement("h2");
+          title.textContent = article.title;
+
+          const description = document.createElement("p");
+          description.textContent = article.description;
+
+          const source = document.createElement("p");
+          source.textContent = "Source: " + article.source.name;
+
+          const publishedAt = document.createElement("p");
+          publishedAt.textContent = "Published At: " + article.publishedAt;
+
+          articleDiv.appendChild(title);
+          articleDiv.appendChild(description);
+          articleDiv.appendChild(source);
+          articleDiv.appendChild(publishedAt);
+
+          newsContainer.appendChild(articleDiv);
+        });
+      })
+      .catch(error => {
+        console.log("Error fetching news:", error);
+      });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
